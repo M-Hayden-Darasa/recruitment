@@ -1,0 +1,4 @@
+const DEFAULT_ACTIVE_MENU = 'home'
+const KEY_REF_HEADER_MENU = 'menu-active'
+
+export { DEFAULT_ACTIVE_MENU, KEY_REF_HEADER_MENU }

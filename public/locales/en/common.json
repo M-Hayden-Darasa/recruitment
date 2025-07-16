@@ -1,0 +1,38 @@
+{
+  "header": {
+    "home": "Home",
+    "who-we-are": "Who we are",
+    "our-services": "Our services",
+    "our-projects": "Our projects",
+    "latest-blog": "Latest blog",
+    "contact-us": "Contact us",
+    "menu": "Menu",
+    "close": "Close",
+    "book-a-call": "Book a call"
+  },
+
+  "footer": {
+    "tell-us-your-new-ideas": "Tell us your new ideas",
+
+    "optimize-your-success": "Optimize your success with our ROI-driven digital marketing agency.",
+    "links": "Links",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "support": "Support",
+    "contact": "Contact",
+    "book-a-call": "Book a call",
+    "blog": "Blog",
+    "careers": "Careers",
+    "social-media": "Social media",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "behance": "Behance",
+
+    "all-rights": "© 2025 All rights reserved.",
+    "english": "English",
+    "vietnamese": "Vietnamese"
+  }
+}
