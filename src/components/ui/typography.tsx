@@ -9,7 +9,7 @@ export const typographyVariants = cva('', {
       h1: 'headline-extralarge',
       h2: 'headline-large',
       h3: 'headline-medium',
-      h4: 'headline-small',
+      h4: 'headline-small-semibold',
       h5: 'headline-extrasmall',
       p: 'content-macro',
     },
@@ -30,6 +30,10 @@ export const typographyVariants = cva('', {
       extrabold: 'font-extrabold',
       black: 'font-black',
     },
+  },
+  defaultVariants: {
+    textColor: 'default',
+    fontWeight: 'medium',
   },
 })
 
@@ -53,7 +57,7 @@ export function Typography({
       className={cn(
         typographyVariants({ variant, textColor, textAlign, fontWeight }),
         className,
-        'text-text-dark',
+        'text-text-adverting',
       )}
       {...props}
     >

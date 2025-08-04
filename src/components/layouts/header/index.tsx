@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { useSearchParams } from 'next/navigation'
-
 import { Drawer } from 'vaul'
 
 import { cn } from '@/lib/utils'
@@ -17,7 +16,7 @@ import { Typography } from '@/components/ui/typography'
 
 import icClose from '@/public/icons/common/ic-close.svg'
 import icArrowRight from '@/public/icons/common/ic-arrow-right.svg'
-import icDigitalLogo from '@/public/icons/common/ic-digital-logo.svg'
+import icDigitalLogo from '@/public/images/common/img-digital-logo.webp'
 
 function Header() {
   const { t } = useTranslation('common')
@@ -39,12 +38,16 @@ function Header() {
   }, [])
 
   function handleRefHeaderMenus(refValue: string): void {
-    router.push({
-      pathname: router?.pathname,
-      query: {
-        [KEY_REF_HEADER_MENU]: refValue || '',
+    router.push(
+      {
+        pathname: router?.pathname,
+        query: {
+          [KEY_REF_HEADER_MENU]: refValue || '',
+        },
       },
-    })
+      undefined,
+      { scroll: false },
+    )
   }
 
   function handleTriggerOpenMobileMenu(): void {
@@ -151,10 +154,10 @@ function Header() {
               <Drawer.Portal>
                 <Drawer.Overlay className="fixed inset-0 bg-black/40" />
                 <Drawer.Content
-                  className="right-5 top-24 bottom-2 fixed outline-none w-fit overflow-y-scroll flex min-w-70 z-10"
+                  className="right-5 top-24 bottom-2 fixed outline-none w-fit h-fit overflow-y-scroll flex min-w-70 z-20 after:hidden"
                   style={{ '--initial-transform': 'calc(100% + 8px)' } as React.CSSProperties}
                 >
-                  <div className="max-tablet:bg-[#f5f5f5]/70 backdrop-blur-md h-full w-full grow p-5 flex flex-col rounded-[16px] relative">
+                  <div className="max-tablet:bg-[#f5f5f5]/70 backdrop-blur-md h-fit w-full grow p-5 flex flex-col rounded-[16px] relative">
                     <div className="absolute top-3 right-3" onClick={handleTriggerCloseMobileMenu}>
                       <ImageCommon
                         src={icClose}

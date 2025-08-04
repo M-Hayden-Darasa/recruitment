@@ -12,28 +12,37 @@
   --color-primary-foreground: #fff;
 
   /* Secondary */
-  --color-secondary: #b3ff00;
+  --color-secondary: #fe3d63;
 
   /* Button */
-  --color-button-text: #101010;
-  --color-button-color: #b3ff00;
+  --color-button-text: #fff;
+  --color-button-color: #fe3d63;
   --color-button-hover: #bfbfbf;
+  --color-button-icon: #fff;
 
   /* Background */
-  --color-background: #fff;
+  --color-background: #171717;
   --color-background-foreground: #000000;
   --color-background-light: #f5f5f5;
   --color-background-dark: #d9d9d9;
   --color-background-our-project: #000000;
   --color-background-adverting: #000;
   --color-background-footer: #d9d9d9;
+  --color-background-card-popular: #23262b;
+  --color-background-rating-start: #ffba23;
+  --color-background-btn-reason: #0f0202b2;
+  --color-background-select-reason: #fff;
+
+  /* Border */
+  --color-card-popular-border: #ffffff33;
 
   /* Text */
   --color-text: #595959;
   --color-text-dark: #101010;
   --color-text-light: #bfbfbf;
   --color-text-adverting: #fff;
-  --color-text-compose: #fff;
+  --color-text-banner: #fff;
+  --color-text-select: #171717;
 
   /* Spacing */
   --spacing: 0.25rem;
@@ -334,7 +343,7 @@
   --breakpoint-large-mobile: 768px;
   --breakpoint-mobile: 640px;
   --breakpoint-extrasmall-mobile: 480px;
-  --breakpoint-small-mobile: 320px;
+  --breakpoint-small-mobile: 370px;
 }
 
 @layer utilities {
@@ -366,11 +375,25 @@
     letter-spacing: var(--font-headline-medium-letter-spacing);
   }
 
+  .headline-semibold {
+    font-size: var(--font-headline-medium-semibold-size);
+    font-weight: var(--font-headline-medium-semibold-weight);
+    line-height: var(--font-headline-medium-semibold-line-height);
+    letter-spacing: var(--font-headline-medium-semibold-letter-spacing);
+  }
+
   .headline-small {
     font-size: var(--font-headline-small-medium-size);
     font-weight: var(--font-headline-small-medium-weight);
     line-height: var(--font-headline-small-medium-line-height);
     letter-spacing: var(--font-headline-small-medium-letter-spacing);
+  }
+
+  .headline-small-semibold {
+    font-size: var(--font-headline-small-semibold-size);
+    font-weight: var(--font-headline-small-semibold-weight);
+    line-height: var(--font-headline-small-semibold-line-height);
+    letter-spacing: var(--font-headline-small-semibold-letter-spacing);
   }
 
   .headline-extrasmall-thin {
@@ -642,29 +665,35 @@ body {
   --color-primary: #fff;
   --color-primary-light: #fff;
   --color-primary-foreground: #101010;
+  --color-background-card-popular: #f7f4f4;
 
   /* Secondary */
-  --color-secondary: #b3ff00;
+  --color-secondary: #fe3d63;
 
   /* Button */
-  --color-button-text: #fff;
-  --color-button-color: #b3ff00;
+  --color-button-text: #101010;
+  --color-button-color: #fe3d63;
   --color-button-hover: #bfbfbf;
+  --color-button-icon: #101010;
+
+  --color-card-popular-border: #bfbfbf;
 
   /* Background */
-  --color-background: #101010;
+  --color-background: #fff;
   --color-background-foreground: #fff;
   --color-background-light: #b4b2b2;
   --color-background-dark: #d9d9d9;
   --color-background-our-project: #d9d9d9;
   --color-background-adverting: #b4b2b2;
   --color-background-footer: #000;
+  --color-background-select-reason: #fff;
 
   /* Text */
   --color-text: #bfbfbf;
-  --color-text-dark: #fff;
   --color-text-light: #bfbfbf;
   --color-text-adverting: #101010;
+  --color-text-select: #fff;
+  --color-text-banner: #fff;
 }
 
 @layer base {
@@ -674,4 +703,52 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@keyframes tiltScaleText {
+  0% {
+    transform: rotate(-5deg) scale(1);
+  }
+  50% {
+    transform: rotate(5deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(-5deg) scale(1);
+  }
+}
+
+@keyframes jackpotShakeScale {
+  0% {
+    transform: rotate(-10deg) scale(1);
+  }
+  15% {
+    transform: rotate(10deg) scale(1.15);
+  }
+  30% {
+    transform: rotate(-8deg) scale(1.1);
+  }
+  45% {
+    transform: rotate(8deg) scale(1.05);
+  }
+  60% {
+    transform: rotate(-6deg) scale(1.02);
+  }
+  75% {
+    transform: rotate(6deg) scale(1);
+  }
+  90% {
+    transform: rotate(-4deg) scale(0.98);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.animate-jackpot {
+  animation: jackpotShakeScale 1.5s ease-in-out infinite;
+}
+
+.ic-mosquito svg {
+  width: 24px;
+  height: 24px;
 }

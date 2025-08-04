@@ -13,7 +13,7 @@ function CardBlog({ blog }: { blog: LatestBlogInterface }) {
 
   return (
     <section>
-      <div className="overflow-hidden rounded-small">
+      <div className="overflow-hidden rounded-small cursor-pointer">
         <ImageCommon
           src={thumnail}
           width={700}

@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'border-primary-light border',
+        default: 'border-button-text border',
         outline: '',
         icon: 'bg-button-color icon-button',
       },

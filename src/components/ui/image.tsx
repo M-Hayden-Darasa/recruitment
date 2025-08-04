@@ -17,7 +17,7 @@ function ImageCommon({ src, alt, width, height, className }: imageInterfaceProps
   return (
     <Image
       src={src}
-      alt={`${alt ? alt : `${src}`}`}
+      alt={alt ? alt : 'image'}
       width={width || 0}
       height={height || 0}
       className={cn('object-cover', className)}

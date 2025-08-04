@@ -4,7 +4,35 @@ import {
   LatestBlogInterface,
   OurProjectsInterface,
   OurServicesInterface,
+  PopularGenreProductsInterface,
+  ReasonInterface,
 } from '@/models/home'
+
+import imgSport from '@/public/images/common/img-sport.webp'
+import imgBigWin from '@/public/images/common/img-bigwin.webp'
+import imgExplode from '@/public/images/common/img-explode.webp'
+import imgBetGame from '@/public/images/common/img-bet-game.webp'
+import imgFishBet from '@/public/images/common/img-fish-bet.webp'
+import imgCardGame from '@/public/images/common/img-card-game.webp'
+import imgCommunity from '@/public/images/common/img-community.webp'
+import imgFreshNest from '@/public/images/common/img-fresh-nest.webp'
+import imgBigWinSpeed from '@/public/images/common/img-bigwin-speed.webp'
+import imgBigWinLivestream from '@/public/images/common/img-bigwin-livestream.jpg'
+
+import imgBti from '@/public/images/common/img-bti-sport.webp'
+import icBti from '@/public/icons/home/ic-btn-btc.svg'
+import imgIbc from '@/public/images/common/img-ibc-sport.webp'
+import icIbc from '@/public/icons/home/ic-btn-ibc.svg'
+import imgK from '@/public/images/common/img-k-sport.webp'
+import icK from '@/public/icons/home/ic-k-sport.svg'
+import imgTechplay from '@/public/images/common/img-techplay.webp'
+import icTechPlay from '@/public/icons/home/ic-techplay.svg'
+import imgGsSport from '@/public/images/common/img-gs-sports.webp'
+import icGsSport from '@/public/icons/home/ic-gs-sport.svg'
+
+import imgBlog1 from '@/public/images/common/img-new1.webp'
+import imgBlog2 from '@/public/images/common/img-new2.webp'
+import imgBlog3 from '@/public/images/common/img-new3.webp'
 
 const customerAvatars: AvatarCustomerInterface[] = [
   {
@@ -23,37 +51,47 @@ const customerAvatars: AvatarCustomerInterface[] = [
 
 const digitalMarketingProducts: DigitalProductsInterface[] = [
   {
-    href: 'https://framerusercontent.com/images/9OieI1qQRIyO83s2W0BSEwnWs.jpg',
-    nameProduct: 'Travelista',
+    href: imgBigWinLivestream,
+    nameProduct: 'Xóc đĩa Livestream',
     typeProduct: 'Content Marketing',
   },
   {
-    href: 'https://framerusercontent.com/images/MMNjB4wFJqQ9tvVhmSWq2nVAtlU.jpg',
-    nameProduct: 'FitLife Studios',
+    href: imgBetGame,
+    nameProduct: 'Tài xỉu Livestream',
     typeProduct: 'Social Media Marketing',
   },
   {
-    href: 'https://framerusercontent.com/images/VFwKdqS1n9i7HwO9yhU6Payuzk.jpg',
-    nameProduct: 'FreshNest',
+    href: imgFreshNest,
+    nameProduct: 'Bầu cua BigWin',
     typeProduct: 'Social Media Marketing',
   },
   {
-    href: 'https://framerusercontent.com/images/qwTKRxrhuJ0Jp7FcgutnbCd1Ys.jpg',
-    nameProduct: 'EcoSolutions',
+    href: imgBigWin,
+    nameProduct: 'Xóc đĩa BigWin',
+    typeProduct: 'Performance Marketing',
+  },
+  {
+    href: imgBigWinSpeed,
+    nameProduct: 'Xóc đĩa Live siêu tốc',
     typeProduct: 'Content Marketing',
+  },
+  {
+    href: imgCommunity,
+    nameProduct: 'Sicbo BigWin',
+    typeProduct: 'Community Building',
   },
 ]
 
 export const OurServices: OurServicesInterface[] = [
   {
     value: 'services-1',
-    label: 'branding-and-strategy',
-    content: 'our-branding',
+    label: 'our-product',
+    content: 'we-provide',
   },
   {
     value: 'services-2',
-    label: 'analytics-and-reporting',
-    content: 'our-analytics',
+    label: 'customer-service',
+    content: 'we-are-always',
   },
   {
     value: 'services-3',
@@ -62,18 +100,18 @@ export const OurServices: OurServicesInterface[] = [
   },
   {
     value: 'services-4',
-    label: 'email-marketing',
-    content: 'our-email',
+    label: 'diverse-account-options',
+    content: 'offers-a-wide',
   },
   {
     value: 'services-5',
-    label: 'pay-per',
-    content: 'our-pay-per-click',
+    label: 'responsible-gambling',
+    content: 'strictly-adheres',
   },
   {
     value: 'services-6',
-    label: 'content-marketing',
-    content: 'our-content',
+    label: 'security',
+    content: 'we-enforce-a-strict',
   },
 ]
 
@@ -135,22 +173,19 @@ const ourProjectsRight: OurProjectsInterface[] = [
 
 const latestBlogs: LatestBlogInterface[] = [
   {
-    thumnail:
-      'https://framerusercontent.com/images/t7ZGNtBnjEJRJd8eZF4kCw0jw.jpg?scale-down-to=1024',
+    thumnail: imgBlog1,
     dateTime: 'Jun 25, 2024',
     label: 'the-role-of',
     content: 'this-iterative-process',
   },
   {
-    thumnail:
-      'https://framerusercontent.com/images/LUGHUqtnMC2cxYt3G1zRx8s6zh4.jpg?scale-down-to=2048',
+    thumnail: imgBlog2,
     dateTime: 'Jun 24, 2024',
     label: 'designing-for-user',
     content: 'methods-such-as',
   },
   {
-    thumnail:
-      'https://framerusercontent.com/images/se6L5EeDqcgbbFHN21I1r0Zwxg.jpg?scale-down-to=1024',
+    thumnail: imgBlog3,
     dateTime: 'Jun 23, 2024',
     label: 'the-future-of-product',
     content: 'designers-are',
@@ -159,31 +194,93 @@ const latestBlogs: LatestBlogInterface[] = [
 
 const advertingTop: { content: string }[] = [
   {
-    content: 'Branding and Strategy',
+    content: 'strategic-branding',
   },
   {
-    content: 'Analytics and Reporting',
+    content: 'player-analytics',
   },
   {
-    content: 'Website Development',
+    content: 'website-development-optimate',
   },
   {
-    content: 'Branding and Strategy',
+    content: 'gambling-trends-update',
   },
 ]
 
 const advertingBottom: { content: string }[] = [
   {
-    content: 'Pay-Per-Click Advertising',
+    content: 'earn-rewards',
   },
   {
-    content: 'Content Marketing',
+    content: 'daily-content',
   },
   {
-    content: 'Social Media Marketing',
+    content: 'share-on-social',
   },
   {
-    content: 'Search Engine Optimization',
+    content: 'search-play',
+  },
+]
+
+const popularGenreProducts: PopularGenreProductsInterface[] = [
+  {
+    href: imgSport,
+    nameProduct: 'Thể thao',
+    typeProduct: 'Content Marketing',
+    ratings: 4.9,
+  },
+  {
+    href: imgBigWin,
+    nameProduct: 'Live casino',
+    typeProduct: 'Social Media Marketing',
+    ratings: 4.9,
+  },
+  {
+    href: imgBetGame,
+    nameProduct: 'Quay số',
+    typeProduct: 'Social Media Marketing',
+    ratings: 4.9,
+  },
+  {
+    href: imgFishBet,
+    nameProduct: 'Bắn cá',
+    typeProduct: 'Performance Marketing',
+    ratings: 4.9,
+  },
+  {
+    href: imgExplode,
+    nameProduct: 'Nổ hũ',
+    typeProduct: 'Content Marketing',
+    ratings: 4.9,
+  },
+  {
+    href: imgCardGame,
+    nameProduct: 'Game bài',
+    typeProduct: 'Community Building',
+    ratings: 4.9,
+  },
+]
+
+const reasons: ReasonInterface[] = [
+  {
+    thumbnail: imgBti,
+    button: icBti,
+  },
+  {
+    thumbnail: imgIbc,
+    button: icIbc,
+  },
+  {
+    thumbnail: imgK,
+    button: icK,
+  },
+  {
+    thumbnail: imgTechplay,
+    button: icTechPlay,
+  },
+  {
+    thumbnail: imgGsSport,
+    button: icGsSport,
   },
 ]
 
@@ -195,4 +292,6 @@ export {
   ourProjectsRight,
   latestBlogs,
   advertingBottom,
+  popularGenreProducts,
+  reasons,
 }

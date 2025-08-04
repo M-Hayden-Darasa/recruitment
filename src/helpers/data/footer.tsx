@@ -1,5 +1,6 @@
 import { MenuFootersInterface, MultipleLanguageInterface, SocicalsInterface } from '@/models/footer'
 
+import icRc from '@/public/icons/common/ic-rc.svg'
 import icInstagram from '@/public/icons/common/ic-insta.svg'
 import icYoutube from '@/public/icons/common/ic-youtube.svg'
 import icEngFlag from '@/public/icons/common/ic-eng-flag.svg'
@@ -72,6 +73,10 @@ const footerSocicals: SocicalsInterface[] = [
   {
     key: 'facebook',
     icon: icFacebook?.src,
+  },
+  {
+    icon: icRc?.src,
+    key: 'rc',
   },
 ]
 

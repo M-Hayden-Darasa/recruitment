@@ -28,12 +28,8 @@ function Reason() {
           </Typography>
           <Typography variant="h3">{t('empowering')}</Typography>
           <Typography className="text-text mt-7 max-tablet:mt-4">
-            {t('we-harness-creativity')}
+            {t('we-are-a-dynamic')}
           </Typography>
-          <Typography className="text-text mt-[10px] max-tablet:mt-2">
-            {t('our-greatest')}
-          </Typography>
-          <Typography className="text-text">{t('our-true')}</Typography>
         </div>
 
         <div className="basis-1/2">
@@ -44,7 +40,7 @@ function Reason() {
                 key={services?.value}
                 className="border-text-light"
               >
-                <AccordionTrigger className="cursor-pointer [&>svg]:w-5 [&>svg]:h-5">
+                <AccordionTrigger className="cursor-pointer [&>svg]:w-5 [&>svg]:h-5 [&>svg]:text-button-text">
                   <Typography variant="h4">{t(services?.label)}</Typography>
                 </AccordionTrigger>
                 <AccordionContent>
@@ -63,7 +59,7 @@ function Reason() {
                       src={icArrowRight?.src}
                       width={14}
                       height={14}
-                      className="text-button-text transition-transform duration-300 group-hover:translate-x-[3px]"
+                      className="text-button-icon transition-transform duration-300 group-hover:translate-x-[3px]"
                     />
                   </div>
                 </AccordionContent>
